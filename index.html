@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer 2.0</title>
+  <link rel="shortcut icon" href="./assets/favicon.svg">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+
+    <button id="toggle-mode">
+      <span class="sr-only">Ativar Light Mode</span>
+       <i class="ph ph-sun"></i>
+       <i class="ph ph-moon"></i> 
+    </button>
+    
+    <div class="Counter">
+
+      <section id="timer">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+      </section>
+
+      <section id="controls">
+        <button 
+          data-action="toggleCounter"
+          class="ph ph-play-circle">
+            <span class="sr-only ">Iniciar Contador</span>
+        </button>
+
+        <button 
+          data-action="toggleCounter"
+          class="ph ph-pause-circle">
+            <span class="sr-only">Pausar Contador</span>
+        </button>
+
+        <button 
+          data-action="reset"
+          class="ph ph-stop-circle secondary">
+            <span class="sr-only">Resetar Contador</span>
+        </button>
+
+        <button 
+          data-action="addCounter"
+          class="ph ph-plus-circle secondary"> 
+            <span class="sr-only">Aumentar Contador</span>
+        </button>
+
+        <button 
+          data-action="removeCounter"
+          class="ph ph-minus-circle secondary">
+            <span class="sr-only">Diminuir Contador</span>
+        </button>
+      </section>
+
+    </div>
+    
+    <div class="cardsButton">
+      <section id="sounds">
+
+          <button 
+            data-action="toggleCards"
+            id="cards"
+            class="ph ph-tree secondary">
+              <span class="sr-only ">Som de Floresta</span>
+          </button>
+     
+          <button 
+            data-action="toggleCards"
+            id="cards"
+            class="ph ph-cloud-rain secondary">
+              <span class="sr-only ">Som de Chuva</span>
+          </button>
+        
+          <button 
+            data-action="toggleCards"
+            id="cards" 
+            class="ph ph-storefront secondary">
+              <span class="sr-only" >Som de Cafeteria</span>
+          </button>
+        
+          <button 
+            data-action="toggleCards"
+            id="cards" 
+            class="ph ph-fire secondary">
+              <span class="sr-only ">Som de Lareira</span>
+          </button>
+        
+      </section>
+    </div>
+    
+  </div>
+</body>
+</html>
